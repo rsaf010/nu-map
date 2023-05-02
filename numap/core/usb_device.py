@@ -266,12 +266,15 @@ class USBDevice(USBBaseActor, BaseUSBDevice):
         self.debug('get_string_descriptor: %#x (%#x)' % (num, len(self.strings)))
         s = None
         if num <= len(self.strings):
-            s = self.strings[num - 1].encode('utf-16')
+            s = self.strings[num - 1]
         else:
             if self.configuration:
                 s = self.configuration.get_string_by_id(num)
         if not s:
             s = self.strings[0].encode('utf-16')
+        elif isinstance(s, str):  # vérifier si s est de type string
+            s = s.encode('utf-8')  
+            
         # Linux doesn't like the leading 2-byte Byte Order Mark (BOM);
         # FreeBSD is okay without it
         s = s[2:]
