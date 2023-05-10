@@ -21,7 +21,7 @@ class NumapApp(object):
             self.options = {}
         self.umap_class_dict = {
             'audio': ('audio', 'Headset'),
-            # 'billboard': ('billboard', 'A billboard, requires USB 2.1 and higher'),
+            'billboard': ('billboard', 'A billboard, requires USB 2.1 and higher'),
             'cdc_acm': ('cdc_acm', 'Abstract Control Model device (like serial modem)'),
             'cdc_dl': ('cdc_dl', 'Direct Line Control device (like modem)'),
             'ftdi': ('ftdi', 'USB<->RS232 FTDI chip'),
