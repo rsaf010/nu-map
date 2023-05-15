@@ -2,6 +2,7 @@ nü-map
 =====
 this fork is an adaptation of numap tool to be used with GreatFET One board.
 it is mainly adapted to scan and detect the different USB classes supported by the host
+it is recommended to use this fork with the adapted facedancer : https://github.com/rsaf010/Facedancer
 
 ------------
 nü-map (or nümap/numap) is the second revision of NCC Group's
